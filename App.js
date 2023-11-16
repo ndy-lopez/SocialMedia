@@ -1,12 +1,19 @@
 import React from 'react';
-import {Text, SafeAreaView} from 'react-native';
-import {getFontFamily} from './assets/fonts/helper';
+import {SafeAreaView, TouchableOpacity, View} from 'react-native';
 import Title from './components/Title/Title';
+import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
+import {faEnvelope} from '@fortawesome/free-regular-svg-icons';
+import globalStyle from './assets/styles/globalStyle';
 
 const App = () => {
   return (
     <SafeAreaView>
-      <Title title={"Let's Explore"} />
+      <View style={globalStyle.header}>
+        <Title title={"Let's Explore"} />
+        <TouchableOpacity style={globalStyle.messageIcon}>
+          <FontAwesomeIcon icon={faEnvelope} color={'#898DAE'} />
+        </TouchableOpacity>
+      </View>
     </SafeAreaView>
   );
 };

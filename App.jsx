@@ -1,8 +1,15 @@
 import React from 'react';
-import {SafeAreaView} from 'react-native';
+import {Text, SafeAreaView} from 'react-native';
 
 const App = () => {
-  return <SafeAreaView />;
+  return (
+    <SafeAreaView>
+      <Text
+        style={{fontSize: 50, fontFamily: 'Inter-Black', fontWeight: '400'}}>
+        Hello World!
+      </Text>
+    </SafeAreaView>
+  );
 };
 
 export default App;

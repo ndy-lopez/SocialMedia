@@ -1,9 +1,16 @@
 import React from 'react';
-import {SafeAreaView, TouchableOpacity, Text, View} from 'react-native';
+import {
+  SafeAreaView,
+  TouchableOpacity,
+  Text,
+  View,
+  FlatList,
+} from 'react-native';
 import Title from './components/Title/Title';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {faEnvelope} from '@fortawesome/free-regular-svg-icons';
 import globalStyle from './assets/styles/globalStyle';
+import UserStory from './components/UserStory/UserStory';
 
 const App = () => {
   const userStories = [
@@ -64,6 +71,18 @@ const App = () => {
           </View>
         </TouchableOpacity>
       </View>
+      <View style={globalStyle.userStoryContainer} />
+      <FlatList
+        horizontal={true}
+        showsHorizontalScrollIndicator={false}
+        data={userStories}
+        renderItem={({item}) => (
+          <UserStory
+            firstName={item.firstName}
+            profileImage={item.profileImage}
+          />
+        )}
+      />
     </SafeAreaView>
   );
 };

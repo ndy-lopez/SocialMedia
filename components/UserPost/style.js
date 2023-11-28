@@ -31,6 +31,22 @@ const style = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: '#EFF2F6',
   },
+  userPostStats: {
+    marginLeft: 10,
+    marginTop: 10,
+    flexDirection: 'row',
+  },
+  userPostStatButton: {
+    flexDirection: 'row',
+  },
+  userPostStatButtonRight: {
+    flexDirection: 'row',
+    marginLeft: 27,
+  },
+  userPostStatText: {
+    marginLeft: 5,
+    color: '#79869F',
+  },
 });
 
 export default style;

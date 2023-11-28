@@ -21,6 +21,16 @@ const style = StyleSheet.create({
     marginTop: 5,
     marginLeft: 5,
   },
+  postImage: {
+    alignItems: 'center',
+    marginTop: 20,
+  },
+  userPostContainer: {
+    marginTop: 35,
+    paddingBottom: 20,
+    borderBottomWidth: 1,
+    borderBottomColor: '#EFF2F6',
+  },
 });
 
 export default style;
